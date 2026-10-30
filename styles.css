@@ -556,11 +556,6 @@ section {
   width: fit-content;
 }
 
-.project-card .status.planned {
-  color: var(--accent);
-  border-color: var(--accent);
-}
-
 .service-list {
   display: grid;
   gap: 1.5rem;
@@ -621,10 +616,6 @@ section {
   border-color: var(--panel-border);
 }
 
-.panel-dark .project-card .status.planned {
-  color: var(--accent-soft);
-  border-color: var(--accent-soft);
-}
 
 /* ---------- Forms ---------- */
 label {
