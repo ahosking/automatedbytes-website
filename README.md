@@ -11,7 +11,7 @@ open any `.html` file directly in a browser, or serve the folder as-is
 automatedbytes-website/
 ├── index.html              Home - hero, three pillars, open-source proof section, CTA
 ├── services.html           What we do: automation, managed IT, cybersecurity, custom builds
-├── projects.html           Health-Flare, Inner Flare, Open Health Index (planned)
+├── projects.html           Health Flare, Inner Flare, Open Health Index (all live/active)
 ├── security-privacy.html   Security & privacy principles (dedicated, front-and-center page)
 ├── about.html              Founder-led origin story + background
 ├── contact.html            mailto: contact (no backend - static site)
@@ -69,15 +69,11 @@ values in `styles.css`.
    a `mailto:` placeholder. This is flagged in an HTML comment on that
    page. Confirm it's a real, monitored inbox (or replace it) before
    publishing.
-2. **GitHub project links** - `projects.html` and `index.html` link to
-   Health-Flare and Inner Flare with `href="#"` placeholders, since no
-   confirmed GitHub org/repo URL was provided. Replace with the real
-   `github.com/health-flare/...` (or wherever the org actually lives)
-   URLs once confirmed.
-3. **Open Health Index** - linked to `https://openhealthindex.org`,
-   which per the brief is a planned project; confirm that domain is
-   actually registered/owned before publishing the link, or swap it
-   for `#` if it isn't live yet.
+
+GitHub project links (`github.com/Health-Flare/app`, `github.com/Health-Flare/InnerFlare`)
+and the Open Health Index domain (`openhealthindex.org`) are confirmed
+live; all three products (Health Flare, Inner Flare, Open Health Index)
+are active, not placeholders.
 
 ## Design notes
 
