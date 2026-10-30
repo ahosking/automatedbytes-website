@@ -2,6 +2,11 @@
    Automated Bytes - shared stylesheet
    One file, no build step. Tokens via CSS custom properties,
    theme switched with [data-theme] on <html>.
+
+   Visual language: bold geometric sans headlines, pill buttons,
+   alternating full-bleed dark/light panels with a brand "swirl"
+   accent - inspired by modern fintech marketing sites, built in
+   our own amber/orange-on-charcoal palette.
    ============================================================ */
 
 /* ---------- Design tokens ---------- */
@@ -23,6 +28,17 @@
   --card-bg: #ffffff;
   --code-bg: #efece7;
   --shadow: 0 1px 2px rgba(42, 42, 45, 0.08);
+  /* Full-bleed dark panels (hero / CTA / footer) - a fixed dark
+     band independent of the light/dark/contrast toggle, the way
+     the reference design always keeps those sections dark. */
+  --panel-bg: #22262a;
+  --panel-surface: #2c3136;
+  --panel-ink: #f6f4f1;
+  --panel-muted: #c7c4bf;
+  --panel-border: #40454a;
+  --radius-lg: 28px;
+  --radius-md: 16px;
+  --radius-pill: 999px;
 }
 
 [data-theme="dark"] {
@@ -42,6 +58,11 @@
   --card-bg: #242426;
   --code-bg: #2d2d30;
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --panel-bg: #000000;
+  --panel-surface: #141414;
+  --panel-ink: #f2f0ed;
+  --panel-muted: #b8b6b2;
+  --panel-border: #333333;
 }
 
 [data-theme="contrast"] {
@@ -61,6 +82,13 @@
   --card-bg: #000000;
   --code-bg: #000000;
   --shadow: none;
+  --panel-bg: #000000;
+  --panel-surface: #000000;
+  --panel-ink: #ffffff;
+  --panel-muted: #ffffff;
+  --panel-border: #ffffff;
+  --radius-lg: 10px;
+  --radius-md: 8px;
 }
 
 /* ---------- Reset-ish basics ---------- */
@@ -76,30 +104,30 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--ink);
-  font-family: "Iowan Old Style", "Palatino Linotype", Georgia, "Segoe UI", system-ui, sans-serif;
-  line-height: 1.55;
+  font-family: "Plus Jakarta Sans", -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Body text stays on a plain sans for legibility; headings get a little
-   editorial weight. Both are system-stack, no webfont requests. */
 body,
 input,
 button,
 textarea {
-  font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: "Plus Jakarta Sans", -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 h1, h2, h3, h4 {
-  font-family: Georgia, "Iowan Old Style", "Times New Roman", serif;
-  line-height: 1.2;
+  font-family: "Plus Jakarta Sans", -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 1.08;
   color: var(--ink);
   margin: 0 0 0.5em;
 }
 
-h1 { font-size: clamp(1.9rem, 4vw, 2.75rem); }
-h2 { font-size: clamp(1.4rem, 2.6vw, 1.9rem); }
-h3 { font-size: 1.15rem; }
+h1 { font-size: clamp(2.3rem, 5.2vw, 3.6rem); }
+h2 { font-size: clamp(1.7rem, 3.4vw, 2.3rem); }
+h3 { font-size: 1.2rem; font-weight: 700; }
 
 p {
   margin: 0 0 1em;
@@ -164,7 +192,7 @@ textarea:focus-visible,
   color: var(--accent-ink);
   padding: 0.6em 1em;
   z-index: 100;
-  font-weight: 600;
+  font-weight: 700;
   border-radius: 0 0 6px 0;
 }
 
@@ -184,23 +212,72 @@ main {
 }
 
 section {
-  padding: 3rem 0;
+  padding: 4rem 0;
 }
 
-section + section {
-  border-top: 1px solid var(--border-soft);
+.eyebrow {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin-bottom: 0.8em;
 }
 
 .lede {
   color: var(--muted);
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   max-width: 54ch;
 }
+
+/* ---------- Dark panel sections (hero / CTA / footer) ---------- */
+.panel-dark {
+  background: var(--panel-bg);
+  color: var(--panel-ink);
+  position: relative;
+  overflow: hidden;
+}
+
+.panel-dark .lede { color: var(--panel-muted); }
+.panel-dark h1, .panel-dark h2, .panel-dark h3 { color: var(--panel-ink); }
+.panel-dark a:not(.btn) { color: var(--accent-soft); }
+.panel-dark .eyebrow { color: var(--accent-soft); }
+
+.panel-dark + .panel-dark {
+  border-top: 1px solid var(--panel-border);
+}
+
+.swirl-decor {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.55;
+  width: 480px;
+  max-width: 70vw;
+}
+
+.swirl-decor.swirl-tr { top: -4rem; right: -6rem; transform: scaleX(-1); }
+.swirl-decor.swirl-bl { bottom: -5rem; left: -7rem; }
+
+.panel-dark > .wrap {
+  position: relative;
+  z-index: 1;
+}
+
+@media (prefers-contrast: more), (forced-colors: active) {
+  .swirl-decor { display: none; }
+}
+
+[data-theme="contrast"] .swirl-decor { opacity: 0.3; }
 
 /* ---------- Header / Nav ---------- */
 .site-header {
   border-bottom: 1px solid var(--border-soft);
   background: var(--bg);
+  position: sticky;
+  top: 0;
+  z-index: 50;
 }
 
 .header-inner {
@@ -220,14 +297,15 @@ section + section {
   gap: 0.6rem;
   text-decoration: none;
   color: var(--ink);
-  font-weight: 700;
-  font-size: 1.05rem;
+  font-weight: 800;
+  font-size: 1.1rem;
 }
 
 .brand .logo-mark {
   width: 34px;
   height: 34px;
   flex-shrink: 0;
+  border-radius: 9px;
 }
 
 .brand:hover { text-decoration: none; }
@@ -241,7 +319,7 @@ section + section {
 
 .main-nav ul {
   display: flex;
-  gap: 1.25rem;
+  gap: 0.3rem;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -251,19 +329,21 @@ section + section {
 .main-nav a {
   color: var(--ink);
   text-decoration: none;
-  font-weight: 500;
-  font-size: 0.95rem;
-  padding: 0.3em 0.1em;
-  border-bottom: 2px solid transparent;
+  font-weight: 600;
+  font-size: 0.92rem;
+  padding: 0.5em 0.85em;
+  border-radius: var(--radius-pill);
+  border-bottom: none;
+  display: inline-block;
 }
 
 .main-nav a:hover {
-  border-bottom-color: var(--accent);
+  background: var(--surface);
 }
 
 .main-nav a[aria-current="page"] {
-  border-bottom-color: var(--accent);
-  color: var(--accent);
+  background: var(--accent);
+  color: var(--accent-ink);
   font-weight: 700;
 }
 
@@ -300,23 +380,24 @@ section + section {
 /* ---------- Buttons / CTAs ---------- */
 .btn {
   display: inline-block;
-  padding: 0.7em 1.4em;
-  border-radius: 6px;
+  padding: 0.85em 1.7em;
+  border-radius: var(--radius-pill);
   font-weight: 700;
   text-decoration: none;
   border: 2px solid var(--accent);
   min-height: 44px;
   line-height: 1.6;
+  transition: transform 0.15s ease, background 0.15s ease;
 }
 
 .btn-primary {
-  background: var(--accent);
+  background: linear-gradient(135deg, var(--accent-soft), var(--accent-strong));
   color: var(--accent-ink);
+  border-color: transparent;
 }
 
 .btn-primary:hover {
-  background: var(--accent-strong);
-  border-color: var(--accent-strong);
+  transform: translateY(-1px);
 }
 
 .btn-secondary {
@@ -328,13 +409,27 @@ section + section {
   background: var(--surface);
 }
 
-[data-theme="contrast"] .btn {
-  border-width: 3px;
+.panel-dark .btn-secondary {
+  color: var(--panel-ink);
+  border-color: var(--panel-border);
 }
 
-/* ---------- Hero (Home page only - Decide/Learn surface) ---------- */
+.panel-dark .btn-secondary:hover {
+  background: var(--panel-surface);
+}
+
+[data-theme="contrast"] .btn {
+  border-width: 3px;
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-primary:hover { transform: none; }
+}
+
+/* ---------- Hero (Home page) ---------- */
 .hero {
-  padding: 3.5rem 0 3rem;
+  padding: 4.5rem 0 4rem;
 }
 
 .hero-grid {
@@ -345,17 +440,17 @@ section + section {
 }
 
 .hero h1 {
-  margin-bottom: 0.6em;
+  margin-bottom: 0.5em;
 }
 
 .hero .lede {
-  font-size: 1.15rem;
+  font-size: 1.2rem;
 }
 
 .hero-actions {
   display: flex;
   gap: 0.9rem;
-  margin-top: 1.6rem;
+  margin-top: 1.8rem;
   flex-wrap: wrap;
 }
 
@@ -363,6 +458,9 @@ section + section {
   width: 100%;
   max-width: 420px;
   margin: 0 auto;
+  background: var(--panel-surface);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
 }
 
 @media (max-width: 760px) {
@@ -375,28 +473,30 @@ section + section {
   }
 }
 
-/* ---------- Pillars (home) - three distinct blocks, real content ---------- */
+/* ---------- Pillars (home) ---------- */
 .pillars {
   display: grid;
   gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 860px) {
+  .pillars { grid-template-columns: 1fr; }
 }
 
 .pillar {
   display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 1.1rem;
+  gap: 0.8rem;
   align-items: start;
-  padding-bottom: 1.6rem;
-}
-
-.pillar:not(:last-child) {
-  border-bottom: 1px solid var(--border-soft);
+  padding: 1.8rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
 }
 
 .pillar-index {
-  font-family: Georgia, serif;
-  font-size: 2.1rem;
-  font-weight: 700;
+  font-size: 1.9rem;
+  font-weight: 800;
   color: var(--accent);
   line-height: 1;
   min-width: 2ch;
@@ -426,8 +526,8 @@ section + section {
 .card {
   background: var(--card-bg);
   border: 1px solid var(--border-soft);
-  border-radius: 8px;
-  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
 }
 
 [data-theme="contrast"] .card {
@@ -437,9 +537,9 @@ section + section {
 .project-card {
   display: grid;
   gap: 0.6rem;
-  padding: 1.6rem;
+  padding: 1.8rem;
   border: 1px solid var(--border-soft);
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   background: var(--card-bg);
 }
 
@@ -467,16 +567,17 @@ section + section {
 }
 
 .service-item {
-  padding: 1.3rem 0;
-  border-bottom: 1px solid var(--border-soft);
+  padding: 1.5rem;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  background: var(--card-bg);
 }
-
-.service-item:last-child { border-bottom: none; }
 
 .service-item h3 {
   display: flex;
   align-items: baseline;
   gap: 0.6rem;
+  flex-wrap: wrap;
 }
 
 .service-item h3 .tag {
@@ -499,7 +600,7 @@ section + section {
   border-left: none;
 }
 
-/* ---------- Proof section (home) ---------- */
+/* ---------- Proof / stat section (home) ---------- */
 .proof-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -510,19 +611,32 @@ section + section {
   .proof-grid { grid-template-columns: 1fr; }
 }
 
+.panel-dark .project-card {
+  background: var(--panel-surface);
+  border-color: var(--panel-border);
+}
+
+.panel-dark .project-card .status {
+  color: var(--panel-muted);
+  border-color: var(--panel-border);
+}
+
+.panel-dark .project-card .status.planned {
+  color: var(--accent-soft);
+  border-color: var(--accent-soft);
+}
+
 /* ---------- Forms ---------- */
 label {
   display: block;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 0.3em;
 }
 
 /* ---------- Footer ---------- */
 .site-footer {
-  border-top: 1px solid var(--border-soft);
-  padding: 2.5rem 0;
-  margin-top: 2rem;
-  color: var(--muted);
+  padding: 3rem 0;
+  color: var(--panel-muted);
 }
 
 .footer-inner {
@@ -542,7 +656,7 @@ label {
 }
 
 .footer-nav a {
-  color: var(--muted);
+  color: var(--panel-muted);
 }
 
 .footer-note {
@@ -571,6 +685,8 @@ label {
     justify-content: space-between;
   }
   .main-nav ul {
-    gap: 0.9rem;
+    gap: 0.4rem;
   }
+  section { padding: 3rem 0; }
+  .hero { padding: 3rem 0 2.5rem; }
 }
