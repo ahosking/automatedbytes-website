@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects - Automated Bytes</title>
+<meta name="description" content="Open-source projects from Automated Bytes: Health-Flare, Inner Flare, and the planned Open Health Index.">
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("ab-theme");
+      document.documentElement.setAttribute("data-theme", (t === "light" || t === "dark" || t === "contrast") ? t : "light");
+    } catch (e) {
+      document.documentElement.setAttribute("data-theme", "light");
+    }
+  })();
+</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <img class="logo-mark" src="assets/img/logo.svg" alt="" width="34" height="34">
+      Automated Bytes
+    </a>
+    <nav class="main-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html" aria-current="page">Projects</a></li>
+        <li><a href="security-privacy.html">Security &amp; Privacy</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="theme-toggle"></div>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section>
+    <div class="wrap two-col">
+      <div>
+        <h1>Open-source projects</h1>
+        <p class="lede">This is our proof-of-practice work: real software we build and maintain in the open, under the same security-and-privacy-first approach we bring to client work.</p>
+      </div>
+      <img class="illustration" src="assets/img/illustration-opensource.svg" alt="A line branching from one point into two, representing open-source collaboration" width="400" height="300">
+    </div>
+  </section>
+
+  <section aria-labelledby="apps-heading">
+    <div class="wrap">
+      <h2 id="apps-heading" class="visually-hidden">Projects list</h2>
+      <div class="stack">
+
+        <article class="project-card">
+          <span class="status">Active · In App Store review</span>
+          <h3>Health-Flare</h3>
+          <p>An open-source, offline-only chronic illness symptom tracker, and the successor to Flaredown. Built so people managing a chronic condition can track symptoms, triggers, and treatments without their data leaving their device.</p>
+          <p><a href="https://github.com/Health-Flare/app">View on GitHub →</a></p>
+        </article>
+
+        <article class="project-card">
+          <span class="status">Active</span>
+          <h3>Inner Flare</h3>
+          <p>An open-source, offline-only cycle and reproductive health tracker - the second app in the Health-Flare family, built on the same offline-first, privacy-first foundation.</p>
+          <p><a href="https://github.com/Health-Flare/InnerFlare">View on GitHub →</a></p>
+        </article>
+
+        <article class="project-card">
+          <span class="status planned">Planned</span>
+          <h3>Open Health Index</h3>
+          <p>An index of open-source health tools, planned as a resource for finding privacy-respecting software in a space dominated by closed, data-harvesting apps. Not yet built - this is a stated intention, not a live product.</p>
+          <p><a href="https://openhealthindex.org">openhealthindex.org (planned) →</a></p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="why-heading">
+    <div class="wrap">
+      <h2 id="why-heading">Why we build these ourselves</h2>
+      <p>Health-Flare and Inner Flare aren't demos or side projects - they're where we prove out the same principles we apply to client work: offline-first where it's viable, no unnecessary data collection, and software that stays useful without a subscription or a data-sharing agreement attached. Read the origin story on the <a href="about.html">About page</a>.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <nav class="footer-nav" aria-label="Footer">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="security-privacy.html">Security &amp; Privacy</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <p class="footer-note">&copy; <span id="copyright-year">2026</span> Automated Bytes. People-centric IT and automation.</p>
+    </nav>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

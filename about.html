@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About - Automated Bytes</title>
+<meta name="description" content="Why Automated Bytes exists: a founder-led story, and a background in platform engineering, SRE, and automation.">
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("ab-theme");
+      document.documentElement.setAttribute("data-theme", (t === "light" || t === "dark" || t === "contrast") ? t : "light");
+    } catch (e) {
+      document.documentElement.setAttribute("data-theme", "light");
+    }
+  })();
+</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <img class="logo-mark" src="assets/img/logo.svg" alt="" width="34" height="34">
+      Automated Bytes
+    </a>
+    <nav class="main-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="security-privacy.html">Security &amp; Privacy</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="theme-toggle"></div>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section>
+    <div class="wrap two-col">
+      <div>
+        <h1>About Automated Bytes</h1>
+        <p class="lede">A background in platform engineering and a reason for building software that keeps people, not just systems, in mind.</p>
+      </div>
+      <img class="illustration" src="assets/img/illustration-people.svg" alt="Three simple figures standing together" width="400" height="300">
+    </div>
+  </section>
+
+  <section aria-labelledby="origin-heading">
+    <div class="wrap">
+      <h2 id="origin-heading">Where this started</h2>
+      <p>Health Flare and Inner Flare exist because tracking a chronic health condition day-to-day is harder than it needs to be - scattered across notebooks, memory, and apps that don't respect your data. That gap is what led to building Health Flare, and later Inner Flare, as the kind of tools that should have existed from the start.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="background-heading">
+    <div class="wrap">
+      <h2 id="background-heading">Background</h2>
+      <p>Automated Bytes is founder-led, with a working background in platform engineering, site reliability, and automation - the discipline of keeping complex systems running reliably, and of finding the manual steps worth removing before they cause an incident. That same approach carries over into client IT and automation work: pragmatic, built to be maintained, and built with the assumption that the people depending on a system matter more than the system itself.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="cta-heading">
+    <div class="wrap">
+      <h2 id="cta-heading">Want to talk about a project?</h2>
+      <a class="btn btn-primary" href="contact.html">Contact Automated Bytes</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <nav class="footer-nav" aria-label="Footer">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="security-privacy.html">Security &amp; Privacy</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <p class="footer-note">&copy; <span id="copyright-year">2026</span> Automated Bytes. People-centric IT and automation.</p>
+    </nav>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
