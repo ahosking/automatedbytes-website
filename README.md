@@ -63,17 +63,11 @@ values in `styles.css`.
 - `prefers-reduced-motion` is respected (smooth-scroll and any transition
   durations are collapsed for users who've asked for reduced motion).
 
-## Placeholders the site owner must confirm before launch
+## Launch status
 
-1. **Email address** - `contact.html` uses `hello@automatedbytes.com` as
-   a `mailto:` placeholder. This is flagged in an HTML comment on that
-   page. Confirm it's a real, monitored inbox (or replace it) before
-   publishing.
-
-GitHub project links (`github.com/Health-Flare/app`, `github.com/Health-Flare/InnerFlare`)
-and the Open Health Index domain (`openhealthindex.org`) are confirmed
-live; all three products (Health Flare, Inner Flare, Open Health Index)
-are active, not placeholders.
+All copy and links are confirmed live: the contact email, the
+Health Flare / Inner Flare GitHub repos, and the Open Health Index
+domain. No outstanding placeholders.
 
 ## Design notes
 
