@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Automated Bytes - People-centric IT &amp; automation</title>
+<meta name="description" content="Automated Bytes builds people-centric IT and automation: modern computing applied, security and privacy first. Proof-of-practice work is open source.">
+<script>
+  // Applied before paint to avoid a flash of the wrong theme.
+  (function () {
+    try {
+      var t = localStorage.getItem("ab-theme");
+      if (t === "light" || t === "dark" || t === "contrast") {
+        document.documentElement.setAttribute("data-theme", t);
+      } else {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    } catch (e) {
+      document.documentElement.setAttribute("data-theme", "light");
+    }
+  })();
+</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <img class="logo-mark" src="assets/img/logo.svg" alt="" width="34" height="34">
+      Automated Bytes
+    </a>
+    <nav class="main-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="security-privacy.html">Security &amp; Privacy</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="theme-toggle"><!-- buttons injected by script.js --></div>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>Technology that serves people, not the other way around.</h1>
+        <p class="lede">Automated Bytes is the parent organization behind people-centric IT and automation work - pragmatic tooling that removes manual drudgery, built with security and privacy as a prerequisite, not an afterthought.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="contact.html">Get in touch</a>
+          <a class="btn btn-secondary" href="services.html">See what we do</a>
+        </div>
+      </div>
+      <img class="hero-art illustration" src="assets/img/illustration-automation.svg" alt="A sequence of workflow steps connecting into one automated step, with a small gear accent" width="400" height="300">
+    </div>
+  </section>
+
+  <section aria-labelledby="pillars-heading">
+    <div class="wrap">
+      <h2 id="pillars-heading">What we build on</h2>
+      <div class="pillars">
+        <div class="pillar">
+          <span class="pillar-index" aria-hidden="true">1</span>
+          <div>
+            <h3>People-centric IT &amp; automation</h3>
+            <p>Technology should serve people, not the other way around. Every engagement starts with how a team actually works today, then finds - or creates - the parts of modern computing that genuinely help, instead of forcing a process to fit a tool.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <span class="pillar-index" aria-hidden="true">2</span>
+          <div>
+            <h3>Modern computing, applied</h3>
+            <p>Automation and tooling are only worth building when they remove real manual drudgery. We favor pragmatic solutions over impressive-looking ones - scripts, integrations, and systems that keep working after we leave the room.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <span class="pillar-index" aria-hidden="true">3</span>
+          <div>
+            <h3>Security &amp; privacy first</h3>
+            <p>Data security and privacy are a prerequisite, built into every engagement and every project from the start - not a checklist bolted on at the end. See the <a href="security-privacy.html">Security &amp; Privacy page</a> for the specifics.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="proof-heading">
+    <div class="wrap">
+      <h2 id="proof-heading">Proof, not promises</h2>
+      <p class="lede">Rather than take our word for how we build, you can look at what we've shipped. Our flagship work is open source.</p>
+      <div class="proof-grid">
+        <article class="project-card">
+          <h3>Health-Flare</h3>
+          <p>An open-source, offline-only chronic illness symptom tracker - the successor to Flaredown. Currently in App Store review.</p>
+          <p><a href="projects.html">Read more about Health-Flare →</a></p>
+        </article>
+        <article class="project-card">
+          <h3>Inner Flare</h3>
+          <p>An open-source, offline-only cycle and reproductive health tracker - the second app in the Health-Flare family.</p>
+          <p><a href="projects.html">Read more about Inner Flare →</a></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="cta-heading">
+    <div class="wrap">
+      <h2 id="cta-heading">Talk to us about your workflow</h2>
+      <p class="lede">If something in your day-to-day is manual, repetitive, or feels riskier than it should be, that's a good place to start a conversation.</p>
+      <a class="btn btn-primary" href="contact.html">Contact Automated Bytes</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <nav class="footer-nav" aria-label="Footer">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="security-privacy.html">Security &amp; Privacy</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <p class="footer-note">&copy; <span id="copyright-year">2026</span> Automated Bytes. People-centric IT and automation.</p>
+    </nav>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

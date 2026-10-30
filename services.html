@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services - Automated Bytes</title>
+<meta name="description" content="IT automation, managed IT support, cybersecurity, and custom technology projects from Automated Bytes.">
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("ab-theme");
+      document.documentElement.setAttribute("data-theme", (t === "light" || t === "dark" || t === "contrast") ? t : "light");
+    } catch (e) {
+      document.documentElement.setAttribute("data-theme", "light");
+    }
+  })();
+</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <img class="logo-mark" src="assets/img/logo.svg" alt="" width="34" height="34">
+      Automated Bytes
+    </a>
+    <nav class="main-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html" aria-current="page">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="security-privacy.html">Security &amp; Privacy</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="theme-toggle"></div>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section>
+    <div class="wrap">
+      <h1>Services</h1>
+      <p class="lede">Four kinds of work, all pointed at the same goal: fewer manual steps, fewer avoidable risks, more time spent on work that actually needs a person.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="list-heading">
+    <div class="wrap">
+      <h2 id="list-heading" class="visually-hidden">Service list</h2>
+      <div class="service-list">
+
+        <article class="service-item">
+          <h3><span class="tag">Automation</span> IT automation</h3>
+          <p>We find the repetitive, error-prone parts of day-to-day IT work - provisioning, onboarding/offboarding, backups, reporting, routine maintenance - and replace the manual version with scripts, scheduled jobs, or integrations your team can actually read and maintain.</p>
+          <p>Deliverables are plain: working automation, documentation of what it does and why, and a handover that doesn't leave you dependent on us to keep it running.</p>
+        </article>
+
+        <article class="service-item">
+          <h3><span class="tag">Support</span> Managed services &amp; IT support</h3>
+          <p>Day-to-day IT support for small and mid-sized teams - endpoints, accounts, infrastructure basics, and the troubleshooting that otherwise falls on whoever's closest to the problem.</p>
+          <p>We aim to reduce how often you need us, not increase it: the goal is a stable environment, not a retainer that never shrinks.</p>
+        </article>
+
+        <article class="service-item">
+          <h3><span class="tag">Security</span> Cybersecurity</h3>
+          <p>Practical security work: access control, account hygiene, backup and recovery planning, patching discipline, and closing the gaps that cause most real incidents - not theoretical ones.</p>
+          <p>See the <a href="security-privacy.html">Security &amp; Privacy page</a> for the principles behind how we approach this on every engagement.</p>
+        </article>
+
+        <article class="service-item">
+          <h3><span class="tag">Build</span> Custom technology projects</h3>
+          <p>When off-the-shelf tooling doesn't fit, we build the smaller, purpose-built alternative - internal tools, integrations between systems that don't talk to each other, or a focused app for one real workflow.</p>
+          <p>Our own open-source apps (see <a href="projects.html">Projects</a>) are built the same way we build for clients: offline-first where it makes sense, and privacy considered from the first design decision.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="cta-heading">
+    <div class="wrap">
+      <h2 id="cta-heading">Not sure which of these fits?</h2>
+      <p class="lede">That's normal - most engagements start as a conversation about a workflow, not a request for a specific service.</p>
+      <a class="btn btn-primary" href="contact.html">Start a conversation</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <nav class="footer-nav" aria-label="Footer">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="security-privacy.html">Security &amp; Privacy</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <p class="footer-note">&copy; <span id="copyright-year">2026</span> Automated Bytes. People-centric IT and automation.</p>
+    </nav>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

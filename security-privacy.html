@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Security &amp; Privacy - Automated Bytes</title>
+<meta name="description" content="How Automated Bytes approaches data security and privacy as a prerequisite in every engagement.">
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("ab-theme");
+      document.documentElement.setAttribute("data-theme", (t === "light" || t === "dark" || t === "contrast") ? t : "light");
+    } catch (e) {
+      document.documentElement.setAttribute("data-theme", "light");
+    }
+  })();
+</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <img class="logo-mark" src="assets/img/logo.svg" alt="" width="34" height="34">
+      Automated Bytes
+    </a>
+    <nav class="main-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="security-privacy.html" aria-current="page">Security &amp; Privacy</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="theme-toggle"></div>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section>
+    <div class="wrap two-col">
+      <div>
+        <h1>Security &amp; privacy, first</h1>
+        <p class="lede">Data security and privacy are a prerequisite, built into every engagement and every project from the start - not bolted on after. These are the principles behind that, in plain terms.</p>
+      </div>
+      <img class="illustration" src="assets/img/illustration-security.svg" alt="A padlock inside a shield outline" width="400" height="300">
+    </div>
+  </section>
+
+  <section aria-labelledby="principles-heading">
+    <div class="wrap">
+      <h2 id="principles-heading" class="visually-hidden">Principles</h2>
+      <div class="principles">
+
+        <div class="principle">
+          <h3>Data minimization</h3>
+          <p>We don't collect, store, or request data we don't need to do the work. Fewer places data exists means fewer places it can be exposed, lost, or misused - so the default question for any new field, log, or integration is whether it's actually necessary.</p>
+        </div>
+
+        <div class="principle">
+          <h3>Offline-first where possible</h3>
+          <p>When a workflow doesn't genuinely need a server or the cloud, we keep it off one. Our own apps, Health-Flare and Inner Flare, are built offline-only by design - your data stays on your device unless you choose to export it yourself.</p>
+        </div>
+
+        <div class="principle">
+          <h3>No dark patterns</h3>
+          <p>No confusing consent flows, no pre-checked boxes, no making opting out harder than opting in. If a choice affects your data, it should be clear what you're choosing and easy to change your mind.</p>
+        </div>
+
+        <div class="principle">
+          <h3>Encryption as a baseline</h3>
+          <p>Data in transit is encrypted as standard practice, and sensitive data at rest is encrypted wherever the platform and project support it. We treat this as a baseline expectation for any system we touch, not an optional upgrade.</p>
+        </div>
+
+        <div class="principle">
+          <h3>Security considered from day one</h3>
+          <p>Access control, backup planning, and account hygiene are part of the initial design conversation for every engagement - not a review that happens after something is already built and harder to change.</p>
+        </div>
+
+        <div class="principle">
+          <h3>Being direct about limits</h3>
+          <p>We don't claim certifications or compliance frameworks we haven't actually gone through. If a client needs a specific compliance posture we don't yet hold, we'll say so plainly rather than overstate what's in place.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="cta-heading">
+    <div class="wrap">
+      <h2 id="cta-heading">Questions about a specific project?</h2>
+      <p class="lede">Happy to walk through how these principles would apply to your situation.</p>
+      <a class="btn btn-primary" href="contact.html">Contact Automated Bytes</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <nav class="footer-nav" aria-label="Footer">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="security-privacy.html">Security &amp; Privacy</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <p class="footer-note">&copy; <span id="copyright-year">2026</span> Automated Bytes. People-centric IT and automation.</p>
+    </nav>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

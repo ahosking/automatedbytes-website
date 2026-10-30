@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - Automated Bytes</title>
+<meta name="description" content="Get in touch with Automated Bytes.">
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("ab-theme");
+      document.documentElement.setAttribute("data-theme", (t === "light" || t === "dark" || t === "contrast") ? t : "light");
+    } catch (e) {
+      document.documentElement.setAttribute("data-theme", "light");
+    }
+  })();
+</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <img class="logo-mark" src="assets/img/logo.svg" alt="" width="34" height="34">
+      Automated Bytes
+    </a>
+    <nav class="main-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="security-privacy.html">Security &amp; Privacy</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+      <div class="theme-toggle"></div>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section>
+    <div class="wrap">
+      <h1>Contact</h1>
+      <p class="lede">The fastest way to reach us is email. Tell us briefly what you're working on or what's manual and shouldn't be - we'll follow up from there.</p>
+
+      <!--
+        PLACEHOLDER EMAIL - the site owner must confirm or replace this
+        address before launch. "hello@automatedbytes.com" is a plausible
+        placeholder only; it has not been verified as a real, monitored
+        inbox for this domain.
+      -->
+      <p>
+        <a class="btn btn-primary" href="mailto:hello@automatedbytes.com">Email hello@automatedbytes.com</a>
+      </p>
+
+      <p class="footer-note">This is a static site with no backend, so there's no contact form here on purpose - the mailto link above opens your own email client. If you'd rather not use email, mention a preferred channel when you write in.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <nav class="footer-nav" aria-label="Footer">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="security-privacy.html">Security &amp; Privacy</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <p class="footer-note">&copy; <span id="copyright-year">2026</span> Automated Bytes. People-centric IT and automation.</p>
+    </nav>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>document.getElementById("copyright-year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

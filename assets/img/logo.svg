@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="ab-logo-title">
+  <title id="ab-logo-title">Automated Bytes logo</title>
+  <defs>
+    <linearGradient id="abGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F7941E"/>
+      <stop offset="100%" stop-color="#E8590C"/>
+    </linearGradient>
+  </defs>
+  <!-- broken dashed concentric arcs: automation / signal motif -->
+  <circle cx="32" cy="32" r="29" fill="none" stroke="currentColor" stroke-opacity="0.25" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <circle cx="32" cy="32" r="24" fill="none" stroke="currentColor" stroke-opacity="0.35" stroke-width="1.5" stroke-dasharray="4 6"/>
+  <!-- split gear / lowercase "b" cog shape -->
+  <g>
+    <path d="M32 10
+             a22 22 0 0 0 0 44
+             a22 22 0 0 0 0 -44 Z
+             M32 18 a14 14 0 1 0 0.01 0 Z"
+          fill="url(#abGrad)" fill-rule="evenodd"/>
+    <path d="M32 10
+             a22 22 0 0 1 0 44
+             a22 22 0 0 1 0 -44 Z
+             M32 18 a14 14 0 1 1 -0.01 0 Z"
+          fill="#2A2A2D" fill-rule="evenodd"/>
+    <!-- gear teeth, four notches top/right/bottom/left -->
+    <g fill="#2A2A2D">
+      <rect x="29" y="4" width="6" height="7" rx="1.5"/>
+      <rect x="53" y="29" width="7" height="6" rx="1.5"/>
+      <rect x="29" y="53" width="6" height="7" rx="1.5"/>
+    </g>
+    <g fill="url(#abGrad)">
+      <rect x="4" y="29" width="7" height="6" rx="1.5"/>
+    </g>
+  </g>
+</svg>

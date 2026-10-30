@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="illo-security-title">
+  <title id="illo-security-title">A padlock inside a shield outline, representing data security and privacy</title>
+  <rect width="400" height="300" fill="none"/>
+  <!-- shield -->
+  <path d="M200 40 L300 75 V165 C300 220 255 255 200 270 C145 255 100 220 100 165 V75 Z"
+        fill="#F6F4F1" stroke="#2A2A2D" stroke-width="3"/>
+  <!-- lock body -->
+  <rect x="165" y="150" width="70" height="55" rx="8" fill="#E8590C"/>
+  <path d="M178 150 v-20 a22 22 0 0 1 44 0 v20" fill="none" stroke="#2A2A2D" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="200" cy="175" r="7" fill="#ffffff"/>
+  <rect x="197" y="178" width="6" height="14" fill="#ffffff"/>
+</svg>
